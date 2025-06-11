@@ -1,0 +1,415 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4a90e2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('veter1.jpg') center/cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    margin-top: 250px;
+    height: auto;
+    border-radius: 20px 2px 20px 2px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background: linear-gradient(45deg, #ffffff, #a8d8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-slogan {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+}
+
+/* Video Section */
+.video-section {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.video-container {
+    border-radius: 15px ;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0);
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #2a5298, #4a90e2);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.6);
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+}
+
+/* Products/Services Section */
+.products-section {
+    background: white;
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e3c72;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #2a5298, #4a90e2);
+    border-radius: 2px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: 25px;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.product-features {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4a90e2;
+    text-align: center;
+    background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Services Section */
+.services-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: #4a90e2;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+.contact-section .section-title {
+    color: white;
+}
+
+.contact-section .section-title::after {
+    background: linear-gradient(45deg, #ffffff, #a8d8ff);
+}
+
+.contact-form {
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.form-label {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background: white;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+    border-color: transparent;
+}
+
+.whatsapp-button {
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(45deg, #128c7e, #075e54);
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: linear-gradient(45deg, #2a5298, #4a90e2);
+    color: white;
+    border-radius: 50%;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.5);
+    color: white;
+}
+
+.footer-text {
+    color: #ccc;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-slogan {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .product-image {
+        height: 250px;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .logo {
+    max-width: 150px;
+    margin-top: 250px;
+    height: auto;
+    border-radius: 20px 2px 20px 2px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-slogan {
+        font-size: 1rem;
+    }
+    
+    .cta-button, .whatsapp-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .product-content {
+        padding: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Animation for success message */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
